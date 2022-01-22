@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #8282b9;
+  overflow: hidden;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 25rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20% 0;
+}
+
+.todo-list li {
+  list-style: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.todo-list li .delete-button {
+  color: red;
+  font-size: 1.3rem;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  cursor: pointer;
+}
+
+.todo-list li:hover .delete-button {
+  opacity: 1;
+}
+
+.todo-list input {
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #b4b4f3;
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.todo-list button {
+  background-color: #b4b4f3;
+  outline: none;
+  border: none;
+  border-radius: .7rem;
+  padding: 1rem;
+  width: 10rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: .3rem 0;
+}
+/*# sourceMappingURL=glob.css.map */
