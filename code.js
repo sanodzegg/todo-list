@@ -16,6 +16,9 @@ $('#add').on('click', function(){
                 $('.id-selector')[a].innerText =(`${a+1}`);
                 counter = arr.length;
             }
+        if(arr.length == 0) {
+            counter = 0
         }
+      }
     })(i);
 })
