@@ -12,12 +12,19 @@
     <title>Document</title>
 </head>
 <body>
-    <section role="todolist">
+    <section role="todolist" class="todo-section">
         <div class="todo-list">
-            <ul class="list">
-            </ul>
-            <input itemid="addID" type="text" name="todoinput" id="todoinput">
-            <button id="add">add item</button>
+            <div class="list-wrapper">
+                <ul class="list">
+                </ul>
+            </div>
+            <button id="add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg></button>
+        </div>
+        <div class="input-shade">
+            <div class="input-wrapper">
+                <input itemid="addID" type="text" name="todoinput" id="todoinput">
+                <button id="addToList">add</button>
+            </div>
         </div>
     </section>
     

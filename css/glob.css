@@ -8,11 +8,25 @@
 }
 
 body {
-  background-color: #8282b9;
+  background-color: #F1EFE8;
   overflow: hidden;
 }
 
-.todo-list {
+.todo-section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-section .todo-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,20 +38,95 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding: 5rem 0;
   width: 25rem;
   max-width: 100%;
   margin: 0 auto;
-  padding: 20% 0;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 0 15px #0000004d;
+          box-shadow: 0 0 15px #0000004d;
+  border-radius: .7rem;
 }
 
-.todo-list li {
+.todo-section .todo-list .date-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .7rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-section .todo-list .date-header .day-display-text {
+  text-transform: uppercase;
+  color: #575A6A;
+}
+
+.todo-section .todo-list .date-header .date-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-section .todo-list .date-header .date-display * {
+  padding: 0 .1rem;
+}
+
+.todo-section .todo-list .date-header .date-display .date-dd {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #575A6A;
+}
+
+.todo-section .todo-list .date-header .date-display .date-aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.todo-section .todo-list .date-header .date-display .date-aside * {
+  color: #575A6A;
+  text-transform: uppercase;
+}
+
+.todo-section .todo-list .list-wrapper {
+  height: 300px;
+  padding: 0 2.7rem;
+}
+
+.todo-section .todo-list .list-wrapper ul li {
   list-style: none;
   font-size: 2rem;
   text-transform: uppercase;
   white-space: nowrap;
+  color: #575A6A;
 }
 
-.todo-list li .delete-button {
+.todo-section .todo-list .list-wrapper ul li .delete-button {
   color: red;
   font-size: 1.3rem;
   opacity: 0;
@@ -46,32 +135,88 @@ body {
   cursor: pointer;
 }
 
-.todo-list li:hover .delete-button {
+.todo-section .todo-list .list-wrapper ul li:hover .delete-button {
   opacity: 1;
 }
 
-.todo-list input {
-  background-color: #fff;
-  outline: none;
-  border: 1px solid #b4b4f3;
-  padding: .5rem 1rem;
-  margin: 1rem 0;
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  text-align: center;
+.todo-section .todo-list ::-webkit-scrollbar {
+  width: .5rem;
 }
 
-.todo-list button {
-  background-color: #b4b4f3;
+.todo-section .todo-list ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.todo-section .todo-list ::-webkit-scrollbar-thumb {
+  background: #575A6A;
+  border-radius: 3px;
+}
+
+.todo-section .todo-list ::-webkit-scrollbar-thumb:hover {
+  background: #4a4c5a;
+}
+
+.todo-section .todo-list button {
+  position: absolute;
+  bottom: -2.5rem;
+  background-color: #50E3A4;
   outline: none;
   border: none;
-  border-radius: .7rem;
-  padding: 1rem;
-  width: 10rem;
+  border-radius: 50%;
+  padding: 1.5rem;
   cursor: pointer;
-  color: #fff;
-  font-size: 1rem;
+  color: #f5f5f5;
   text-transform: uppercase;
   margin: .3rem 0;
+}
+
+.todo-section .todo-list button svg {
+  fill: #46BD8B;
+}
+
+.todo-section .input-shade {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  inset: 0;
+  background-color: #b0b0b080;
+}
+
+.todo-section .input-shade .input-wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+}
+
+.todo-section .input-shade .input-wrapper input {
+  position: relative;
+  color: #575A6A;
+  background-color: #f5f5f5;
+  outline: none;
+  border: 2px solid #50E3A4;
+  padding: .5rem 3.5rem .5rem 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  text-align: left;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px #00000015;
+          box-shadow: 0 0 10px #00000015;
+}
+
+.todo-section .input-shade .input-wrapper button {
+  position: absolute;
+  right: 1rem;
+  top: 1.9rem;
+  padding: .3rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #46BD8B;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 /*# sourceMappingURL=glob.css.map */
