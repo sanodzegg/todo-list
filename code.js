@@ -1,3 +1,6 @@
+// fix list fontsizes
+// input field should hide when clicked outside of it
+
 $(document).ready(function(){
     $('.todo-list').append(
         `
@@ -51,11 +54,11 @@ function updateList() {
             if(arr.length == 0) {
                 counter = 0
             }
-        }
+      }
     })(i);
     $('.input-shade').css('display','none')
-    if($('.input-value').text().length > 15){
-        $('.input-value')[$('.input-value').length - 1].innerText = $('.input-value')[$('.input-value').length - 1].textContent.slice(0, 14);
+    if($('.input-value').text().length > 13){
+        $('.input-value')[$('.input-value').length - 1].innerText = $('.input-value')[$('.input-value').length - 1].textContent.slice(0, 13);
     };
 }
 
