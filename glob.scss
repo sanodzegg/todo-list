@@ -73,10 +73,11 @@ body {
             ul {
                 li {
                     list-style: none;
-                    font-size: 2rem;
+                    font-size: 1.3rem;
                     text-transform: uppercase;
                     white-space: nowrap;
                     color: #575A6A;
+                    cursor: pointer;
                     .delete-button {
                         color: red;
                         font-size: 1.3rem;
@@ -160,6 +161,35 @@ body {
                 text-transform: uppercase;
                 cursor: pointer;
             }
+        }
+    }
+    .list-detailed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #F1EFE8;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #00000023;
+        text-align: center;
+        max-width: 400px;
+        span {
+            display: block;
+            word-break: break-all;
+            color: #575A6A;
+            font-size: 1.7rem;
+            padding: 1rem 5rem;
+        }
+        button {
+            cursor: pointer;
+            margin: .3rem 0;
+            padding: .2rem .5rem;
+            text-transform: uppercase;
+            color: #f5f5f5;
+            background-color: #50E3A4;
+            outline: none;
+            border: none;
+            border-radius: 5px;
         }
     }
 }
